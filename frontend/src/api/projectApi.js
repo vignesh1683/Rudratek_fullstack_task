@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://rudratek-fullstack-task.vercel.app',
 });
 
 export const getProjects = async (params) => {
