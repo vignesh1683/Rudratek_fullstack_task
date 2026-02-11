@@ -1,7 +1,10 @@
 const Database = require('better-sqlite3');
 const path = require('path');
 
-const dbPath = path.join(__dirname, '..', '..', 'data', 'projects.db');
+const isVercel = process.env.VERCEL === '1';
+const dbPath = isVercel
+  ? path.join('/tmp', 'projects.db')
+  : path.join(__dirname, '..', '..', 'data', 'projects.db');
 
 // Ensure data directory exists
 const fs = require('fs');
