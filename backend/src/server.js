@@ -24,7 +24,7 @@ app.use(errorHandler);
 // ─── Start Server ────────────────────────────────────────────
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log(`✅ Server running on http://localhost:${PORT}`);
+        console.log(`Server running on http://localhost:${PORT}`);
     });
 }
 
